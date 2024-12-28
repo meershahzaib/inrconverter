@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Simulate redirect after 2 seconds
             setTimeout(() => {
                 // Add your redirect logic here
-                window.location.href='redirect1.html'
+                window.location.href='landingPage.html'
             }, 2000);
 
         } catch (error) {
