@@ -9,7 +9,7 @@
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 </head>
-<body class="bg-gray-50 h-screen flex flex-col items-center justify-start p-4">
+<body class="bg-gray-900 h-screen flex flex-col items-center justify-start p-4">
 
   <!-- Main Container -->
   <div class="w-full max-w-md">
@@ -25,15 +25,15 @@
     </div>
 
     <!-- Pi Coin Section -->
-    <div class="flex items-center border-l-4 border-blue-500 p-4 rounded-lg mb-6 shadow-md">
+    <div class="flex items-center bg-blue-100 border-white p-4 rounded-lg mb-6 shadow-md">
       <img alt="Pi logo" class="w-8 h-8 rounded-full mr-4" src="https://i.ibb.co/nz09Fqd/download.png"/>
-      <span class="text-lg font-semibold">PI</span>
-      <i class="fas fa-chevron-right ml-auto text-gray-400"></i>
+      <span class="text-lg font-semibold" style="color: rgb(0, 0, 0);">PI</span>
+      <i class="fas fa-chevron-right ml-auto text-white" style="color: black;"></i>
     </div>
-
+  
     <!-- Network Section -->
     <div class="mb-4">
-      <button id="networkButton" class="w-full py-3 px-6 border rounded-lg text-left font-semibold text-gray-600 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all flex items-center justify-between">
+      <button style="color: white;" id="networkButton" class="w-full py-3 px-6 border rounded-lg text-left font-semibold text-gray-600 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all flex items-center justify-between">
         Choose network
         <i class="fas fa-chevron-down text-gray-400 ml-3"></i>
       </button>
@@ -42,11 +42,11 @@
   </div>
 
   <!-- Network Selection Popup -->
-  <div id="networkPopup" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center hidden">
-    <div class="bg-white w-full max-w-xs rounded-lg shadow-lg p-4">
+  <div id="networkPopup" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center hidden">
+    <div class="bg-gray-900 w-full max-w-xs rounded-lg shadow-lg p-2" style="border: 1px solid white;">
       <div class="flex justify-between items-center p-4 border-b">
-        <h2 class="text-lg font-semibold">Choose Network</h2>
-        <i id="closePopup" class="fas fa-times cursor-pointer text-gray-500 hover:text-gray-800"></i>
+        <h2 class="text-lg font-semibold" style="color: white;">Choose Network</h2>
+        <i id="closePopup" class="fas fa-times cursor-pointer text-gray-500 hover:text-gray-800" style="color: white;"></i>
       </div>
       <div class="p-4">
         <div class="bg-gray-100 p-3 rounded-lg flex items-center mb-4">

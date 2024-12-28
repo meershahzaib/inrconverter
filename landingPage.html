@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet Overview</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Main Content -->
+  <div id="main-content" class="p-4">
+    <!-- Header -->
+    <div id="overview" class="text-center">
+      <h2 class="text-gray-400 text-sm">Est. Total Value</h2>
+      <h1 class="text-3xl font-semibold">$0.06940762 <span class="text-gray-400 text-sm">USD</span></h1>
+      <p class="text-green-500 text-sm mt-1">Today's PNL <span>+0.00084779 (+1.24%)</span></p>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex justify-center gap-12 mt-8">
+      <div class="flex flex-col items-center">
+        <i class="fas fa-wallet text-yellow-400 text-3xl"></i>
+        <span class="mt-2 text-sm">Deposit</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <i class="fas fa-upload text-yellow-400 text-3xl"></i>
+        <span class="mt-2 text-sm">Withdraw</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <i class="fas fa-sync-alt text-yellow-400 text-3xl"></i>
+        <span class="mt-2 text-sm">Swap</span>
+      </div>
+    </div>
+
+    <!-- Crypto Account Section -->
+    <div id="crypto-account" class="mt-10">
+      <div class="flex justify-between items-center pb-2 border-b border-gray-700">
+        <h3 class="text-lg font-medium">Funding</h3>
+        <div class="text-right">
+          <p class="text-green-500 text-sm">+0.00069408 (+1.15%)</p>
+          <h3 class="text-white font-semibold">$0.06127308</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
