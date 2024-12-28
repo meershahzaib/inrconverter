@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Deposit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script>
+    // JavaScript function to copy text to clipboard and show custom modal
+    function copyToClipboard() {
+      const address = document.getElementById('deposit-address');
+      navigator.clipboard.writeText(address.textContent)
+        .then(() => {
+          // Show custom modal after successful copy
+          document.getElementById('copy-modal').classList.remove('hidden');
+        })
+        .catch(err => {
+          alert('Failed to copy address: ' + err);
+        });
+    }
+
+    // Function to close the modal
+    function closeModal() {
+      document.getElementById('copy-modal').classList.add('hidden');
+    }
+  </script>
+</head>
+<body class="bg-white text-black font-sans">
+
+  <div class="max-w-sm mx-auto p-4">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-4">
+      <i class="fas fa-arrow-left text-xl"></i>
+      <h1 class="text-xl font-semibold">Deposit</h1>
+      <div class="flex space-x-4">
+        <i class="fas fa-question-circle text-xl"></i>
+        <i class="fas fa-receipt text-xl"></i>
+      </div>
+    </div>
+
+    <!-- Pi Network Section -->
+    <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-between mb-4">
+      <div class="flex items-center space-x-2">
+        <img alt="Pi logo" class="w-6 h-6 bg-transparent" src="https://i.ibb.co/cLjK7Xj/download-removebg-preview.png"/>
+        <span class="font-semibold">PI</span>
+      </div>
+      <i class="fas fa-chevron-right text-gray-400"></i>
+    </div>
+
+    <!-- Network Section -->
+    <div class="mb-4">
+      <label class="block text-gray-600 mb-1">Network</label>
+      <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-between">
+        <span>Pi (Pi Network) </span>
+        <i class="fas fa-chevron-down text-gray-400"></i>
+      </div>
+    </div>
+
+    <!-- Deposit Address Section -->
+    <div class="mb-4">
+      <label class="block text-gray-600 mb-1">Deposit Address</label>
+      <div class="flex justify-center mb-2">
+        <img alt="QR code for deposit address" class="w-36 h-36" src="https://i.ibb.co/5cSRpjq/Screenshot-20241228-150756-Pi-Browser.jpg"/>
+      </div>
+      <p class="text-center text-gray-500 mb-2">This address only accepts deposits in Pi Network.</p>
+      <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-between">
+        <span id="deposit-address" class="text-sm truncate">GBFOZ6F3SGSRCAAIGPQMQAEONKKGHHA26GTNMUXLYTLU47CQWSINOBXZ</span>
+        <i class="fas fa-copy text-gray-400 cursor-pointer" onclick="copyToClipboard()"></i>
+      </div>
+    </div>
+
+    <!-- Reminder Section -->
+    <div class="mb-4">
+      <label class="block text-gray-600 mb-1">Reminder</label>
+      <div class="bg-gray-100 p-4 rounded-lg">
+        <div class="flex justify-between mb-2">
+          <span>Minimum deposit amount</span>
+          <span>10 Pi</span>
+        </div>
+        <div class="flex justify-between mb-2">
+          <span>Deposit confirmation</span>
+          <span>7 confirmation</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Withdrawal unlock
+            <i class="fas fa-info-circle text-gray-400"></i>
+          </span>
+          <span>3 confirmation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Modal for Copy Confirmation -->
+  <div id="copy-modal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-80 text-center">
+      <h2 class="text-lg font-semibold text-green-500">Address Copied!</h2>
+      <p class="text-gray-600">The deposit address has been copied to your clipboard.</p>
+      <button onclick="closeModal()" class="mt-4 bg-blue-500 text-white py-2 px-4 rounded-lg">Close</button>
+    </div>
+  </div>
+
+</body>
+</html>
